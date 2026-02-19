@@ -1,0 +1,7 @@
+{
+  "sources": [
+{ "type": "minecraft:single", "resource": "angling:entity/starfish/starfish" },
+    { "type": "minecraft:single", "resource": "angling:entity/starfish/dead_starfish" },
+    { "type": "minecraft:single", "resource": "angling:entity/urchin/urchin" }
+  ]
+}

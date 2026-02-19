@@ -20,16 +20,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.eightsidedsquare.angling.core.AnglingMod"
+      "net.braeden.angling2.AnglingMod"
     ],
     "client": [
-      "com.eightsidedsquare.angling.client.AnglingClient"
+      "net.braeden.angling2.AnglingClient"
     ],
-    "cardinal-components-entity": [
-      "com.eightsidedsquare.angling.cca.AnglingEntityComponents"
-    ],
-    "preLaunch": [
-      "com.eightsidedsquare.angling.core.AnglingPreLaunch"
+    "fabric-datagen": [
+      "net.braeden.angling2.AnglingDataGenerator"
     ]
   },
   "mixins": [
@@ -38,17 +35,9 @@
   "accessWidener": "angling.accesswidener",
 
   "depends": {
-    "fabricloader": ">=0.14.6",
-    "fabric": "*",
-    "minecraft": "~1.19",
-    "java": ">=17",
-    "geckolib3": ">=3.1.0"
-  },
-  "custom": {
-    "cardinal-components": [
-      "angling:fish_spawning"
-    ]
-  },
-  "suggests": {
+    "fabricloader": ">=0.18.0",
+    "fabric-api": "*",
+    "minecraft": "~1.21",
+    "java": ">=21"
   }
 }

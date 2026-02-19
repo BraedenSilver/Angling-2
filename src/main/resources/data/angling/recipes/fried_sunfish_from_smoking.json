@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "cookingtime": 75,
-  "experience": 0.35,
-  "ingredient": {
-    "item": "angling:sunfish"
-  },
-  "result": "angling:fried_sunfish"
-}

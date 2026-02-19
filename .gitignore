@@ -31,3 +31,13 @@ bin/
 # fabric
 
 run/
+.CLAUDE.md
+
+# Ignore CLAUDE.md
+CLAUDE.md
+
+# Ignore BlockBench folder
+BlockBench/
+
+# Ignore .claude folder
+.claude/

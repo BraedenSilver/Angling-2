@@ -1,5 +1,17 @@
 {
+  "parent": "minecraft:block/block",
   "textures": {
-    "particle": "angling:item/dead_starfish"
-  }
+    "all": "angling:entity/starfish/dead_starfish",
+    "particle": "angling:entity/starfish/dead_starfish"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 1, 16],
+      "faces": {
+        "up":   { "uv": [0, 0, 16, 16], "texture": "#all" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#all" }
+      }
+    }
+  ]
 }

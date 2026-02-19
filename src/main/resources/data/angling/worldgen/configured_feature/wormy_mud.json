@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 4,
+    "discard_chance_on_air_exposure": 0.0,
+    "targets": [
+      {
+        "target": { "predicate_type": "minecraft:block_match", "block": "minecraft:mud" },
+        "state": { "Name": "angling:wormy_mud" }
+      },
+      {
+        "target": { "predicate_type": "minecraft:block_match", "block": "minecraft:muddy_mangrove_roots" },
+        "state": { "Name": "angling:wormy_mud" }
+      }
+    ]
+  }
+}

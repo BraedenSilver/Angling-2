@@ -220,24 +220,6 @@
     ],
     "subtitle": "subtitles.entity.sunfish.hurt"
   },
-  "entity.nautilus.hurt": {
-    "sounds": [
-      "angling:block/shell/step1",
-      "angling:block/shell/step2",
-      "angling:block/shell/step3",
-      "angling:block/shell/step4"
-    ],
-    "subtitle": "subtitles.entity.nautilus.hurt"
-  },
-  "entity.nautilus.death": {
-    "sounds": [
-      "angling:block/shell/step1",
-      "angling:block/shell/step2",
-      "angling:block/shell/step3",
-      "angling:block/shell/step4"
-    ],
-    "subtitle": "subtitles.entity.nautilus.death"
-  },
   "entity.pelican.hurt": {
     "sounds": [
       "angling:entity/pelican/hurt1",
