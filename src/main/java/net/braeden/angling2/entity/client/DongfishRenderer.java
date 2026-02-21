@@ -26,6 +26,7 @@ public class DongfishRenderer extends MobRenderer<DongfishEntity, DongfishRender
         super.extractRenderState(entity, state, tickDelta);
         state.idleAnimationState.copyFrom(entity.idleAnimationState);
         state.flopAnimationState.copyFrom(entity.flopAnimationState);
+        state.sheared = entity.isSheared();
     }
 
     @Override

@@ -3,6 +3,11 @@ package net.braeden.angling2.entity;
 import net.braeden.angling2.entity.ai.WormBreeder;
 import net.braeden.angling2.entity.ai.WormBreedGoal;
 import net.braeden.angling2.item.AnglingItems;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
@@ -16,18 +21,45 @@ import net.minecraft.world.entity.ai.goal.TryFindWaterGoal;
 import net.minecraft.world.entity.animal.fish.AbstractFish;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.entity.AnimationState;
 
 public class DongfishEntity extends AbstractFish implements WormBreeder {
     public final AnimationState idleAnimationState = new AnimationState();
     public final AnimationState flopAnimationState = new AnimationState();
 
+    private static final EntityDataAccessor<Boolean> SHEARED =
+            SynchedEntityData.defineId(DongfishEntity.class, EntityDataSerializers.BOOLEAN);
+
     private int wormBredTimer = 0;
 
     public DongfishEntity(EntityType<? extends DongfishEntity> type, Level level) {
         super(type, level);
+    }
+
+    public boolean isSheared() { return this.entityData.get(SHEARED); }
+    private void setSheared(boolean sheared) { this.entityData.set(SHEARED, sheared); }
+
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        super.defineSynchedData(builder);
+        builder.define(SHEARED, false);
+    }
+
+    @Override
+    public void addAdditionalSaveData(ValueOutput output) {
+        super.addAdditionalSaveData(output);
+        output.putBoolean("Sheared", this.isSheared());
+    }
+
+    @Override
+    public void readAdditionalSaveData(ValueInput input) {
+        super.readAdditionalSaveData(input);
+        this.setSheared(input.getBooleanOr("Sheared", false));
     }
 
     @Override
@@ -54,6 +86,11 @@ public class DongfishEntity extends AbstractFish implements WormBreeder {
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
+        if (stack.is(Items.SHEARS) && !this.isSheared() && !this.level().isClientSide()) {
+            this.setSheared(true);
+            this.level().playSound(null, this, SoundEvents.SHEEP_SHEAR, SoundSource.PLAYERS, 1.0f, 1.0f);
+            return InteractionResult.SUCCESS;
+        }
         if (stack.getItem() == AnglingItems.WORM && !this.level().isClientSide() && wormBredTimer <= 0) {
             if (!player.getAbilities().instabuild) stack.shrink(1);
             wormBredTimer = 6000;
