@@ -151,6 +151,14 @@ public class AnglingEntities {
                     .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "mahi_mahi")))
     );
 
+    public static final EntityType<OrcaEntity> ORCA = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "orca")),
+            EntityType.Builder.<OrcaEntity>of(OrcaEntity::new, MobCategory.WATER_CREATURE)
+                    .sized(3.5f, 2.5f)
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "orca")))
+    );
+
     public static void init() {
         // Register attributes
         FabricDefaultAttributeRegistry.register(FRY, FryEntity.createAttributes());
@@ -165,6 +173,7 @@ public class AnglingEntities {
         FabricDefaultAttributeRegistry.register(ANOMALOCARIS, AnomalocarisEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(ANGLERFISH, AnglerfishEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(MAHI_MAHI, MahiMahiEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(ORCA, OrcaEntity.createAttributes());
 
         // Register spawn placements
         SpawnPlacements.register(FRY, SpawnPlacementTypes.IN_WATER,
@@ -188,6 +197,8 @@ public class AnglingEntities {
         SpawnPlacements.register(ANGLERFISH, SpawnPlacementTypes.IN_WATER,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, WaterAnimal::checkSurfaceWaterAnimalSpawnRules);
         SpawnPlacements.register(MAHI_MAHI, SpawnPlacementTypes.IN_WATER,
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, WaterAnimal::checkSurfaceWaterAnimalSpawnRules);
+        SpawnPlacements.register(ORCA, SpawnPlacementTypes.IN_WATER,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, WaterAnimal::checkSurfaceWaterAnimalSpawnRules);
 
         // Register biome spawns
@@ -226,6 +237,10 @@ public class AnglingEntities {
         BiomeModifications.addSpawn(
                 biome -> biome.getBiomeRegistryEntry().is(AnglingBiomeTags.MAHI_MAHI_SPAWN_IN),
                 MobCategory.WATER_CREATURE, MAHI_MAHI, 4, 1, 2
+        );
+        BiomeModifications.addSpawn(
+                biome -> biome.getBiomeRegistryEntry().is(AnglingBiomeTags.ORCA_SPAWN_IN),
+                MobCategory.WATER_CREATURE, ORCA, 1, 1, 2
         );
     }
 }

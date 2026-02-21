@@ -50,6 +50,7 @@ public class AnglingClient implements ClientModInitializer {
         EntityRenderers.register(AnglingEntities.ANOMALOCARIS,  AnomalocarisRenderer::new);
         EntityRenderers.register(AnglingEntities.ANGLERFISH,    AnglerfishRenderer::new);
         EntityRenderers.register(AnglingEntities.MAHI_MAHI,     MahiMahiRenderer::new);
+        EntityRenderers.register(AnglingEntities.ORCA,           OrcaRenderer::new);
 
         // Model layer definitions
         EntityModelLayerRegistry.registerModelLayer(AnglingEntityModelLayers.STARFISH,       StarfishModel::getTexturedModelData);
@@ -67,6 +68,7 @@ public class AnglingClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(AnglingEntityModelLayers.ANOMALOCARIS,  AnomalocarisModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(AnglingEntityModelLayers.ANGLERFISH,    AnglerfishModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(AnglingEntityModelLayers.MAHI_MAHI,     MahiMahiModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(AnglingEntityModelLayers.ORCA,           OrcaModel::getTexturedModelData);
 
         // Block entity renderers
         BlockEntityRenderers.register(AnglingEntities.STARFISH, StarfishBlockEntityRenderer::new);

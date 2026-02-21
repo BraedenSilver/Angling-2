@@ -42,6 +42,7 @@ public class AnglingItems {
     public static final Item ANOMALOCARIS_SPAWN_EGG = registerSpawnEgg("anomalocaris", AnglingEntities.ANOMALOCARIS);
     public static final Item ANGLERFISH_SPAWN_EGG = registerSpawnEgg("anglerfish", AnglingEntities.ANGLERFISH);
     public static final Item MAHI_MAHI_SPAWN_EGG = registerSpawnEgg("mahi_mahi", AnglingEntities.MAHI_MAHI);
+    public static final Item ORCA_SPAWN_EGG = registerSpawnEgg("orca", AnglingEntities.ORCA);
 
     public static final Item ROE = register("roe",
             id -> new RoeBlockItem(AnglingBlocks.ROE,

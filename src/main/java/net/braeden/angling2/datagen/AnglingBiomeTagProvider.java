@@ -54,12 +54,14 @@ public class AnglingBiomeTagProvider extends FabricTagProvider<Biome> {
         builder(AnglingBiomeTags.DUNGENESS_CRAB_BIOMES).add(BEACH);
         builder(AnglingBiomeTags.GHOST_CRAB_BIOMES).add(MANGROVE_SWAMP);
         builder(AnglingBiomeTags.BLUE_CLAW_CRAB_BIOMES).add(STONY_SHORE);
+        builder(AnglingBiomeTags.MOJANG_CRAB_BIOMES).add(SWAMP);
 
         // crab_spawn_in references the sub-variant tags
         builder(AnglingBiomeTags.CRAB_SPAWN_IN)
                 .forceAddTag(AnglingBiomeTags.DUNGENESS_CRAB_BIOMES)
                 .forceAddTag(AnglingBiomeTags.GHOST_CRAB_BIOMES)
-                .forceAddTag(AnglingBiomeTags.BLUE_CLAW_CRAB_BIOMES);
+                .forceAddTag(AnglingBiomeTags.BLUE_CLAW_CRAB_BIOMES)
+                .forceAddTag(AnglingBiomeTags.MOJANG_CRAB_BIOMES);
 
         builder(AnglingBiomeTags.SUNFISH_SPAWN_IN).add(SWAMP);
         builder(AnglingBiomeTags.SEA_SLUG_SPAWN_IN).add(WARM_OCEAN);
@@ -72,11 +74,13 @@ public class AnglingBiomeTagProvider extends FabricTagProvider<Biome> {
         builder(AnglingBiomeTags.ANGLERFISH_SPAWN_IN)
                 .add(DEEP_OCEAN).add(DEEP_COLD_OCEAN).add(DEEP_FROZEN_OCEAN).add(DEEP_LUKEWARM_OCEAN);
         builder(AnglingBiomeTags.MAHI_MAHI_SPAWN_IN)
-                .add(OCEAN).add(DEEP_OCEAN)
-                .add(COLD_OCEAN).add(DEEP_COLD_OCEAN)
-                .add(FROZEN_OCEAN).add(DEEP_FROZEN_OCEAN)
                 .add(LUKEWARM_OCEAN).add(DEEP_LUKEWARM_OCEAN)
                 .add(WARM_OCEAN);
+
+        // Orcas — cold and frozen ocean biomes only
+        builder(AnglingBiomeTags.ORCA_SPAWN_IN)
+                .add(COLD_OCEAN).add(DEEP_COLD_OCEAN)
+                .add(FROZEN_OCEAN).add(DEEP_FROZEN_OCEAN);
 
         // Feature biomes
         builder(AnglingBiomeTags.OYSTER_REEF_BIOMES)

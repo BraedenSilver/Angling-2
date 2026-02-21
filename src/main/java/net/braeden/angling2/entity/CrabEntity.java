@@ -79,6 +79,10 @@ public class CrabEntity extends Animal {
         var biome = world.getBiome(pos);
         if (biome.is(AnglingBiomeTags.GHOST_CRAB_BIOMES)) return CrabVariant.GHOST;
         if (biome.is(AnglingBiomeTags.BLUE_CLAW_CRAB_BIOMES)) return CrabVariant.BLUE_CLAW;
+        if (biome.is(AnglingBiomeTags.MOJANG_CRAB_BIOMES)) {
+            // 5% chance for mojang variant in swamps
+            if (world.getRandom().nextFloat() < 0.05f) return CrabVariant.MOJANG;
+        }
         return CrabVariant.DUNGENESS;
     }
 

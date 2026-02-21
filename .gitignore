@@ -36,11 +36,10 @@ run/
 # Ignore CLAUDE.md
 CLAUDE.md
 
-# Ignore BlockBench folder
-BlockBench/
-
 # Ignore .claude folder
 .claude/
 
 # Generated
 src/main/generated/
+
+ADDING_AN_ANIMAL.txt

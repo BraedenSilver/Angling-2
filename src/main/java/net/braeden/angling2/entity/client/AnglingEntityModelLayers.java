@@ -20,6 +20,7 @@ public final class AnglingEntityModelLayers {
     public static final ModelLayerLocation ANOMALOCARIS = layer("anomalocaris");
     public static final ModelLayerLocation ANGLERFISH = layer("anglerfish");
     public static final ModelLayerLocation MAHI_MAHI = layer("mahi_mahi");
+    public static final ModelLayerLocation ORCA = layer("orca");
 
     private AnglingEntityModelLayers() {}
 

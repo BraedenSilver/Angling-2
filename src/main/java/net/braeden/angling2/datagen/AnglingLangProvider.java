@@ -30,6 +30,7 @@ public class AnglingLangProvider extends FabricLanguageProvider {
         builder.add("entity.angling.anomalocaris", "Anomalocaris");
         builder.add("entity.angling.anglerfish", "Anglerfish");
         builder.add("entity.angling.mahi_mahi", "Mahi Mahi");
+        builder.add("entity.angling.orca", "Orca");
 
         // Sunfish variants
         builder.add("sunfish_variant.angling.pumpkinseed", "Pumpkinseed");
@@ -74,6 +75,7 @@ public class AnglingLangProvider extends FabricLanguageProvider {
         builder.add("crab_variant.angling.dungeness", "Dungeness");
         builder.add("crab_variant.angling.ghost", "Ghost");
         builder.add("crab_variant.angling.blue_claw", "Blue Claw");
+        builder.add("crab_variant.angling.mojang", "Mojang");
 
         // Block items (1.21.11 uses item.* keys for BlockItem.getDescriptionId())
         builder.add("item.angling.algae", "Algae");
@@ -105,6 +107,7 @@ public class AnglingLangProvider extends FabricLanguageProvider {
         builder.add("item.angling.anomalocaris_spawn_egg", "Anomalocaris Spawn Egg");
         builder.add("item.angling.anglerfish_spawn_egg", "Anglerfish Spawn Egg");
         builder.add("item.angling.mahi_mahi_spawn_egg", "Mahi Mahi Spawn Egg");
+        builder.add("item.angling.orca_spawn_egg", "Orca Spawn Egg");
 
         // Bucket items
         builder.add("item.angling.sunfish_bucket", "Bucket of Sunfish");
@@ -182,6 +185,8 @@ public class AnglingLangProvider extends FabricLanguageProvider {
         builder.add("subtitles.entity.mahi_mahi.death", "Mahi Mahi dies");
         builder.add("subtitles.entity.mahi_mahi.flop", "Mahi Mahi flops");
         builder.add("subtitles.entity.mahi_mahi.hurt", "Mahi Mahi hurts");
+        builder.add("subtitles.entity.orca.death", "Orca dies");
+        builder.add("subtitles.entity.orca.hurt", "Orca hurts");
 
         // Advancements
         builder.add("advancements.husbandry.put_worm_in_block.title", "A (Blocky) Can of Worms");

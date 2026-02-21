@@ -5,7 +5,8 @@ import net.minecraft.util.StringRepresentable;
 public enum CrabVariant implements StringRepresentable {
     DUNGENESS(0, "dungeness", 0xFFB5651D),
     GHOST(1,     "ghost",     0xFFF0DEB0),
-    BLUE_CLAW(2, "blue_claw", 0xFF5080AA);
+    BLUE_CLAW(2, "blue_claw", 0xFF5080AA),
+    MOJANG(3,    "mojang",    0xFFD74E4E);
 
     private static final CrabVariant[] VALUES = values();
 

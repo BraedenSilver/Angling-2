@@ -158,6 +158,7 @@ public class AnglingModelProvider extends FabricModelProvider {
         itemModels.generateFlatItem(AnglingItems.ANOMALOCARIS_SPAWN_EGG, SPAWN_EGG);
         itemModels.generateFlatItem(AnglingItems.ANGLERFISH_SPAWN_EGG, SPAWN_EGG);
         itemModels.generateFlatItem(AnglingItems.MAHI_MAHI_SPAWN_EGG, SPAWN_EGG);
+        itemModels.generateFlatItem(AnglingItems.ORCA_SPAWN_EGG, SPAWN_EGG);
 
         // Standard flat items (item/ textures)
         itemModels.generateFlatItem(AnglingItems.WORM, ModelTemplates.FLAT_ITEM);
