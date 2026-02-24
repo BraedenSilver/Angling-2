@@ -15,6 +15,7 @@ import net.braeden.angling2.particle.AnglingParticles;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.minecraft.tags.BiomeTags;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -79,6 +80,9 @@ public class AnglingMod implements ModInitializer {
 		BiomeModifications.addFeature(
 				ctx -> ctx.getBiomeRegistryEntry().is(AnglingBiomeTags.URCHIN_BIOMES),
 				GenerationStep.Decoration.VEGETAL_DECORATION, AnglingPlacedFeatures.URCHIN);
+		BiomeModifications.addFeature(
+				ctx -> ctx.getBiomeRegistryEntry().is(BiomeTags.IS_DEEP_OCEAN),
+				GenerationStep.Decoration.VEGETAL_DECORATION, AnglingPlacedFeatures.HYDROTHERMAL_VENT);
 
 		PelicanSpawner spawner = new PelicanSpawner();
 		ServerTickEvents.END_WORLD_TICK.register(level -> spawner.spawn(level, true, true));

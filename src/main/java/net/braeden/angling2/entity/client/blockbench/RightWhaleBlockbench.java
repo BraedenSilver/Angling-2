@@ -109,23 +109,15 @@ public final class RightWhaleBlockbench {
                 PartPose.offset(0.0F, -3.0F, 32.0F));
 
         // ---- Pectoral fins ----------------------------------------------
-        PartDefinition rightFin = root.addOrReplaceChild("right_fin",
-                CubeListBuilder.create(),
-                PartPose.offset(0.0F, 18.0F, 0.0F));
-
-        rightFin.addOrReplaceChild("cube_r1",
+        root.addOrReplaceChild("right_fin",
                 CubeListBuilder.create()
-                        .texOffs(0, 222).addBox(-22.0F, -5.0F, -1.0F, 22.0F, 5.0F, 37.0F, CubeDeformation.NONE),
-                PartPose.offsetAndRotation(-17.0F, -2.0F, -19.0F, 0.2643F, -0.5944F, -1.3721F));
+                        .texOffs(0, 222).addBox(-22.0F, 0.0F, 0.0F, 22.0F, 5.0F, 37.0F, CubeDeformation.NONE),
+                PartPose.offsetAndRotation(-22.0F, 19.0F, -20.0F, -0.2317F, -0.3405F, -1.0122F));
 
-        PartDefinition leftFin = root.addOrReplaceChild("left_fin",
-                CubeListBuilder.create(),
-                PartPose.offset(0.0F, 18.0F, 0.0F));
-
-        leftFin.addOrReplaceChild("cube_r2",
+        root.addOrReplaceChild("left_fin",
                 CubeListBuilder.create()
-                        .texOffs(0, 222).addBox(0.0F, -5.0F, -1.0F, 22.0F, 5.0F, 37.0F, CubeDeformation.NONE),
-                PartPose.offsetAndRotation(17.0F, -2.0F, -19.0F, 0.2643F, 0.5944F, 1.3721F));
+                        .texOffs(0, 222).addBox(0.0F, 0.0F, 0.0F, 22.0F, 5.0F, 37.0F, CubeDeformation.NONE),
+                PartPose.offsetAndRotation(22.0F, 19.0F, -20.0F, -0.2317F, 0.3405F, 1.0122F));
 
         // ---- Saddle (empty — reserved bone, no geometry) ----------------
         root.addOrReplaceChild("saddle",

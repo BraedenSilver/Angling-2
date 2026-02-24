@@ -26,36 +26,36 @@ public final class UrchinBlockbench {
                 PartPose.offset(0.0F, 0.0F, 1.0F));
 
         spinessmall.addOrReplaceChild("cube_r1",
-                CubeListBuilder.create().texOffs(5, 10).addBox(-3.0F, 0.0F, 0.0F, 3.0F, 0.0F, 5.0F, CubeDeformation.NONE),
-                PartPose.offsetAndRotation(2.0F, -1.0F, 1.0F, -1.5708F, 0.7854F, 3.1416F));
+                CubeListBuilder.create().texOffs(4, 10).addBox(-4.0F, 0.0F, 0.0F, 4.0F, 0.0F, 5.0F, CubeDeformation.NONE),
+                PartPose.offsetAndRotation(1.0F, -1.0F, 0.0F, -1.5708F, 0.7854F, 3.1416F));
 
         spinessmall.addOrReplaceChild("cube_r2",
-                CubeListBuilder.create().texOffs(5, 10).addBox(-3.0F, 0.0F, 0.0F, 3.0F, 0.0F, 5.0F, CubeDeformation.NONE),
-                PartPose.offsetAndRotation(2.0F, -1.0F, -3.0F, -1.5708F, -0.7854F, -3.1416F));
+                CubeListBuilder.create().texOffs(4, 10).addBox(-4.0F, 0.0F, 0.0F, 4.0F, 0.0F, 5.0F, CubeDeformation.NONE),
+                PartPose.offsetAndRotation(1.0F, -1.0F, -2.0F, -1.5708F, -0.7854F, -3.1416F));
 
         spinessmall.addOrReplaceChild("cube_r3",
-                CubeListBuilder.create().texOffs(5, 10).addBox(-3.0F, 0.0F, 0.0F, 3.0F, 0.0F, 5.0F, CubeDeformation.NONE),
-                PartPose.offsetAndRotation(-2.0F, -1.0F, -3.0F, 1.5708F, -0.7854F, 0.0F));
+                CubeListBuilder.create().texOffs(4, 10).addBox(-4.0F, 0.0F, 0.0F, 4.0F, 0.0F, 5.0F, CubeDeformation.NONE),
+                PartPose.offsetAndRotation(-1.0F, -1.0F, -2.0F, 1.5708F, -0.7854F, 0.0F));
 
         spinessmall.addOrReplaceChild("cube_r4",
-                CubeListBuilder.create().texOffs(5, 10).addBox(-3.0F, 0.0F, 0.0F, 3.0F, 0.0F, 5.0F, CubeDeformation.NONE),
-                PartPose.offsetAndRotation(-2.0F, -1.0F, 1.0F, 1.5708F, 0.7854F, 0.0F));
+                CubeListBuilder.create().texOffs(4, 10).addBox(-4.0F, 0.0F, 0.0F, 4.0F, 0.0F, 5.0F, CubeDeformation.NONE),
+                PartPose.offsetAndRotation(-1.0F, -1.0F, 0.0F, 1.5708F, 0.7854F, 0.0F));
 
         PartDefinition spineslarge = bone.addOrReplaceChild("spineslarge",
-                CubeListBuilder.create().texOffs(0, 12).addBox(0.0F, -12.0F, -1.0F, 0.0F, 12.0F, 8.0F, CubeDeformation.NONE),
+                CubeListBuilder.create().texOffs(0, 12).addBox(0.0F, -11.0F, 0.0F, 0.0F, 12.0F, 8.0F, CubeDeformation.NONE),
                 PartPose.offset(0.0F, 0.0F, 1.0F));
 
         spineslarge.addOrReplaceChild("cube_r5",
                 CubeListBuilder.create().texOffs(0, 12).addBox(0.0F, -12.0F, 0.0F, 0.0F, 12.0F, 8.0F, CubeDeformation.NONE),
-                PartPose.offsetAndRotation(0.0F, 0.0F, -1.0F, 0.0F, 1.5708F, 0.0F));
+                PartPose.offsetAndRotation(1.0F, 1.0F, -1.0F, 0.0F, 1.5708F, 0.0F));
 
         spineslarge.addOrReplaceChild("cube_r6",
                 CubeListBuilder.create().texOffs(0, 12).addBox(0.0F, -12.0F, 0.0F, 0.0F, 12.0F, 8.0F, CubeDeformation.NONE),
-                PartPose.offsetAndRotation(0.0F, 0.0F, -1.0F, 0.0F, -1.5708F, 0.0F));
+                PartPose.offsetAndRotation(-1.0F, 1.0F, -1.0F, 0.0F, -1.5708F, 0.0F));
 
         spineslarge.addOrReplaceChild("cube_r7",
                 CubeListBuilder.create().texOffs(0, 12).addBox(0.0F, -12.0F, 0.0F, 0.0F, 12.0F, 8.0F, CubeDeformation.NONE),
-                PartPose.offsetAndRotation(0.0F, 0.0F, -1.0F, 0.0F, 3.1416F, 0.0F));
+                PartPose.offsetAndRotation(0.0F, 1.0F, -2.0F, 0.0F, 3.1416F, 0.0F));
 
         root.addOrReplaceChild("bb_main",
                 CubeListBuilder.create().texOffs(0, 0).addBox(-2.5F, -5.0F, -2.5F, 5.0F, 5.0F, 5.0F, CubeDeformation.NONE),

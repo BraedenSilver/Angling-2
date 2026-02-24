@@ -28,6 +28,12 @@ public class AnglingFeatures {
             new StarfishFeature()
     );
 
+    public static final Feature<NoneFeatureConfiguration> HYDROTHERMAL_VENT = Registry.register(
+            BuiltInRegistries.FEATURE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "hydrothermal_vent"),
+            new HydrothermalVentFeature()
+    );
+
     public static void init() {
         // Features registered via static field initializers above
     }

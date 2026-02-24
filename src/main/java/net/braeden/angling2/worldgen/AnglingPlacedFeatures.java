@@ -20,7 +20,8 @@ public class AnglingPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ALGAE_SWAMP = key("algae_swamp");
     public static final ResourceKey<PlacedFeature> URCHIN      = key("urchin");
     public static final ResourceKey<PlacedFeature> WORMY_DIRT  = key("wormy_dirt");
-    public static final ResourceKey<PlacedFeature> WORMY_MUD   = key("wormy_mud");
+    public static final ResourceKey<PlacedFeature> WORMY_MUD        = key("wormy_mud");
+    public static final ResourceKey<PlacedFeature> HYDROTHERMAL_VENT = key("hydrothermal_vent");
 
     private static ResourceKey<PlacedFeature> key(String name) {
         return ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(MOD_ID, name));

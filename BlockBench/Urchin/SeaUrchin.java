@@ -22,13 +22,13 @@ public class SeaUrchin extends EntityModel<Entity> {
 
 		ModelPartData spinessmall = bone.addChild("spinessmall", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 1.0F));
 
-		ModelPartData cube_r1 = spinessmall.addChild("cube_r1", ModelPartBuilder.create().uv(5, 10).cuboid(-3.0F, 0.0F, 0.0F, 3.0F, 0.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, -1.0F, 0.0F, -1.5708F, 0.7854F, 3.1416F));
+		ModelPartData cube_r1 = spinessmall.addChild("cube_r1", ModelPartBuilder.create().uv(4, 10).cuboid(-4.0F, 0.0F, 0.0F, 4.0F, 0.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, -1.0F, 0.0F, -1.5708F, 0.7854F, 3.1416F));
 
-		ModelPartData cube_r2 = spinessmall.addChild("cube_r2", ModelPartBuilder.create().uv(5, 10).cuboid(-3.0F, 0.0F, 0.0F, 3.0F, 0.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, -1.0F, -2.0F, -1.5708F, -0.7854F, -3.1416F));
+		ModelPartData cube_r2 = spinessmall.addChild("cube_r2", ModelPartBuilder.create().uv(4, 10).cuboid(-4.0F, 0.0F, 0.0F, 4.0F, 0.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, -1.0F, -2.0F, -1.5708F, -0.7854F, -3.1416F));
 
-		ModelPartData cube_r3 = spinessmall.addChild("cube_r3", ModelPartBuilder.create().uv(5, 10).cuboid(-3.0F, 0.0F, 0.0F, 3.0F, 0.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(-1.0F, -1.0F, -2.0F, 1.5708F, -0.7854F, 0.0F));
+		ModelPartData cube_r3 = spinessmall.addChild("cube_r3", ModelPartBuilder.create().uv(4, 10).cuboid(-4.0F, 0.0F, 0.0F, 4.0F, 0.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(-1.0F, -1.0F, -2.0F, 1.5708F, -0.7854F, 0.0F));
 
-		ModelPartData cube_r4 = spinessmall.addChild("cube_r4", ModelPartBuilder.create().uv(5, 10).cuboid(-3.0F, 0.0F, 0.0F, 3.0F, 0.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(-1.0F, -1.0F, 0.0F, 1.5708F, 0.7854F, 0.0F));
+		ModelPartData cube_r4 = spinessmall.addChild("cube_r4", ModelPartBuilder.create().uv(4, 10).cuboid(-4.0F, 0.0F, 0.0F, 4.0F, 0.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(-1.0F, -1.0F, 0.0F, 1.5708F, 0.7854F, 0.0F));
 
 		ModelPartData spineslarge = bone.addChild("spineslarge", ModelPartBuilder.create().uv(0, 12).cuboid(0.0F, -11.0F, 0.0F, 0.0F, 12.0F, 8.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 1.0F));
 
