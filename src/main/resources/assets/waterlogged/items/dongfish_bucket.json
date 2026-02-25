@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "on_true": { "type": "minecraft:model", "model": "waterlogged:item/dongfish_bucket_horngus" },
+    "on_false": { "type": "minecraft:model", "model": "waterlogged:item/dongfish_bucket_no_horngus" }
+  }
+}

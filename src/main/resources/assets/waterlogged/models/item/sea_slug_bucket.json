@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "waterlogged:item/sea_slug_bucket",
+    "layer1": "waterlogged:item/sea_slug_bucket_overlay_0",
+    "layer2": "waterlogged:item/sea_slug_bucket_overlay_1"
+  }
+}

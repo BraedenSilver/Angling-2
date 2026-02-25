@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "angling",
+  "id": "waterlogged",
   "version": "${version}",
 
-  "name": "Angling Mod",
+  "name": "Waterlogged Mod",
   "description": "FISH!",
   "authors": [
     "EightSidedSquare",
@@ -15,18 +15,18 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/angling/icon.png",
+  "icon": "assets/waterlogged/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.braeden.angling2.AnglingMod"
+      "net.braeden.waterlogged.WaterloggedMod"
     ],
     "client": [
-      "net.braeden.angling2.AnglingClient"
+      "net.braeden.waterlogged.WaterloggedClient"
     ],
     "fabric-datagen": [
-      "net.braeden.angling2.AnglingDataGenerator"
+      "net.braeden.waterlogged.WaterloggedDataGenerator"
     ]
   },
   "mixins": [

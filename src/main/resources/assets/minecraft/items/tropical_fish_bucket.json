@@ -1,7 +1,7 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "angling:item/tropical_fish_bucket",
+    "model": "waterlogged:item/tropical_fish_bucket",
     "tints": [
       { "type": "minecraft:constant", "value": -1 },
       { "type": "minecraft:custom_model_data", "default": 16777215 },

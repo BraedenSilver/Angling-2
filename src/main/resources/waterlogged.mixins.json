@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.braeden.waterlogged.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MobGoalSelectorAccessor",
+    "VanillaFishWormMixin",
+    "PufferfishWormMixin",
+    "ComposterBlockMixin",
+    "TropicalFishBucketMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

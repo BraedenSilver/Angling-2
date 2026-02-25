@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "waterlogged:item/dongfish_bucket"
+  },
+  "overrides": [
+      {
+        "predicate": {
+          "waterlogged:has_horngus": 0
+        },
+        "model": "waterlogged:item/dongfish_bucket_no_horngus"
+      },
+      {
+        "predicate": {
+          "waterlogged:has_horngus": 1
+        },
+        "model": "waterlogged:item/dongfish_bucket_horngus"
+      }
+    ]
+}
