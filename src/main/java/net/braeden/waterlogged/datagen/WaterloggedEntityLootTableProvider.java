@@ -30,19 +30,11 @@ public class WaterloggedEntityLootTableProvider extends FabricEntityLootTablePro
         add(WaterloggedEntities.FRY,         LootTable.lootTable());
         add(WaterloggedEntities.SEA_SLUG,    LootTable.lootTable());
 
-        // Dongfish: drops raw dongfish (cooked if on fire)
-        add(WaterloggedEntities.DONGFISH, LootTable.lootTable()
-                .withPool(new LootPool.Builder()
-                        .setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(WaterloggedItems.RAW_DONGFISH)
-                                .apply(SmeltItemFunction.smelted().when(shouldSmeltLoot())))));
+        // Dongfish: no drops
+        add(WaterloggedEntities.DONGFISH, LootTable.lootTable());
 
-        // Seahorse: drops raw seahorse (cooked if on fire)
-        add(WaterloggedEntities.SEAHORSE, LootTable.lootTable()
-                .withPool(new LootPool.Builder()
-                        .setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(WaterloggedItems.RAW_SEAHORSE)
-                                .apply(SmeltItemFunction.smelted().when(shouldSmeltLoot())))));
+        // Seahorse: no drops
+        add(WaterloggedEntities.SEAHORSE, LootTable.lootTable());
 
         // Bubble Eye: drops raw bubble eye (cooked if on fire)
         add(WaterloggedEntities.BUBBLE_EYE, LootTable.lootTable()

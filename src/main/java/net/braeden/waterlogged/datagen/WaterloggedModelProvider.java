@@ -183,14 +183,8 @@ public class WaterloggedModelProvider extends FabricModelProvider {
         itemModels.generateFlatItem(WaterloggedItems.COOKED_CRAB_LEGS, ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(WaterloggedItems.RAW_CATFISH, ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(WaterloggedItems.COOKED_CATFISH, ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(WaterloggedItems.RAW_DONGFISH, ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(WaterloggedItems.COOKED_DONGFISH, ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(WaterloggedItems.RAW_SEAHORSE, ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(WaterloggedItems.COOKED_SEAHORSE, ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(WaterloggedItems.RAW_BUBBLE_EYE, ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(WaterloggedItems.COOKED_BUBBLE_EYE, ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(WaterloggedItems.RAW_ANOMALOCARIS, ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(WaterloggedItems.COOKED_ANOMALOCARIS, ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(WaterloggedItems.RAW_ANGLERFISH, ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(WaterloggedItems.COOKED_ANGLERFISH, ModelTemplates.FLAT_ITEM);
 

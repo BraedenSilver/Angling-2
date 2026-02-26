@@ -179,12 +179,12 @@ public class FryEntity extends AbstractFish {
                 tf.setPackedVariant(tropicalFishVariant);
             }
             if (adult instanceof SunfishEntity sf) {
-                SunfishVariant[] variants = SunfishVariant.values();
+                SunfishVariant[] wild = SunfishVariant.WILD_VARIANTS;
                 SunfishVariant base = (parentVariantId >= 0)
                         ? SunfishVariant.byId(parentVariantId)
-                        : variants[serverLevel.getRandom().nextInt(variants.length)];
+                        : wild[serverLevel.getRandom().nextInt(wild.length)];
                 sf.setVariant(serverLevel.getRandom().nextFloat() < 0.05f
-                        ? variants[serverLevel.getRandom().nextInt(variants.length)]
+                        ? wild[serverLevel.getRandom().nextInt(wild.length)]
                         : base);
             }
             if (adult instanceof net.minecraft.world.entity.Mob mob) mob.setPersistenceRequired();

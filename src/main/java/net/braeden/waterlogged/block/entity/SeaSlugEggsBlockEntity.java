@@ -82,6 +82,7 @@ public class SeaSlugEggsBlockEntity extends BlockEntity {
             slug.setColor(inheritTrait(rng, be.parent1Color, be.parent2Color, SeaSlugColor.values()));
             slug.setPattern(inheritTrait(rng, be.parent1Pattern, be.parent2Pattern, SeaSlugPattern.values()));
             slug.setBioluminescence(inheritTrait(rng, be.parent1Biolum, be.parent2Biolum, SeaSlugBioluminescence.values()));
+            slug.setPersistenceRequired();
             slug.setPos(pos.getX() + 0.5, pos.getY() + 0.1, pos.getZ() + 0.5);
             level.addFreshEntity(slug);
         }

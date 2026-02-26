@@ -49,14 +49,8 @@ public class WaterloggedItemGroup {
                 output.accept(WaterloggedItems.COOKED_CRAB_LEGS);
                 output.accept(WaterloggedItems.RAW_CATFISH);
                 output.accept(WaterloggedItems.COOKED_CATFISH);
-                output.accept(WaterloggedItems.RAW_DONGFISH);
-                output.accept(WaterloggedItems.COOKED_DONGFISH);
-                output.accept(WaterloggedItems.RAW_SEAHORSE);
-                output.accept(WaterloggedItems.COOKED_SEAHORSE);
                 output.accept(WaterloggedItems.RAW_BUBBLE_EYE);
                 output.accept(WaterloggedItems.COOKED_BUBBLE_EYE);
-                output.accept(WaterloggedItems.RAW_ANOMALOCARIS);
-                output.accept(WaterloggedItems.COOKED_ANOMALOCARIS);
                 output.accept(WaterloggedItems.RAW_ANGLERFISH);
                 output.accept(WaterloggedItems.COOKED_ANGLERFISH);
 

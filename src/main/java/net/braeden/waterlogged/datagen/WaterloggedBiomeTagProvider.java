@@ -52,9 +52,9 @@ public class WaterloggedBiomeTagProvider extends FabricTagProvider<Biome> {
     protected void addTags(HolderLookup.Provider registries) {
         // Crab sub-variant biomes
         builder(WaterloggedBiomeTags.DUNGENESS_CRAB_BIOMES).add(BEACH);
-        builder(WaterloggedBiomeTags.GHOST_CRAB_BIOMES).add(MANGROVE_SWAMP);
+        builder(WaterloggedBiomeTags.GHOST_CRAB_BIOMES).add(SWAMP).add(MANGROVE_SWAMP);
         builder(WaterloggedBiomeTags.BLUE_CLAW_CRAB_BIOMES).add(STONY_SHORE);
-        builder(WaterloggedBiomeTags.MOJANG_CRAB_BIOMES).add(SWAMP);
+        builder(WaterloggedBiomeTags.MOJANG_CRAB_BIOMES).add(SWAMP).add(MANGROVE_SWAMP);
 
         // crab_spawn_in references the sub-variant tags
         builder(WaterloggedBiomeTags.CRAB_SPAWN_IN)

@@ -37,6 +37,7 @@ public class CrabRenderer extends MobRenderer<CrabEntity, CrabRenderState, CrabM
         state.movingAnimationState.copyFrom(entity.movingAnimationState);
         state.rotatedAnimationState.copyFrom(entity.rotatedAnimationState);
         state.forwardsAnimationState.copyFrom(entity.forwardsAnimationState);
+        state.dancingAnimationState.copyFrom(entity.dancingAnimationState);
         state.variant = entity.getVariant();
         state.isBaby = entity.isBaby();
     }

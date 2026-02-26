@@ -24,9 +24,9 @@ Small baby fish. Fry aren't found in the wild — they hatch from **Roe** (fish 
 
 *Spawns in:* Swamp
 
-A small freshwater panfish that comes in **9 color variants**: Bluegill, Pumpkinseed, Redbreast, Longear, Warmouth, Green, Bluegill × Pumpkinseed hybrid, Bluegill × Redbreast hybrid, and Diansus Diansur. Feed two sunfish a **Worm** each to breed — they'll lay Roe that hatches into fry inheriting the parent's variant (with a 5% chance of mutation to a random variant).
+A small freshwater panfish that comes in **9 color variants**: Bluegill, Pumpkinseed, Redbreast, Longear, Warmouth, Green, Bluegill × Pumpkinseed hybrid, Bluegill × Redbreast hybrid, and Diansus Diansur. Feed two sunfish a **Worm** each to breed — they'll lay Roe that hatches into fry inheriting the parent's variant (with a 5% chance of mutation to a random variant). The **Diansus Diansur** variant never spawns naturally — name a sunfish "Diansu" with a name tag to reveal it.
 
-**Drops:** Sunfish | **Bucketable:** Yes (right-click with a Water Bucket)
+**Drops:** Raw Sunfish | **Bucketable:** Yes (right-click with a Water Bucket)
 
 ---
 
@@ -46,7 +46,7 @@ A bottom-feeding fish that actively seeks out and **eats nearby Algae blocks** a
 
 A cave fish found in subterranean pools and aquifers throughout most of the overworld. Spawns in small groups. Has a distinctive feature called a "horngus" — right-click with **Shears** to trim it off. The sheared state is permanent and is saved into its bucket. Feed two dongfish a **Worm** each to breed.
 
-**Drops:** Raw Dongfish | **Bucketable:** Yes
+**Bucketable:** Yes
 
 ---
 
@@ -56,7 +56,7 @@ A cave fish found in subterranean pools and aquifers throughout most of the over
 
 A slow, delicate fish that spawns in small groups in warm coastal waters. Feed two seahorses a **Worm** each to breed.
 
-**Drops:** Raw Seahorse | **Bucketable:** Yes
+**Bucketable:** Yes
 
 ---
 
@@ -96,7 +96,7 @@ A deep-sea predator with a glowing lure. Found in all deep ocean variants. Feed 
 
 An ancient Cambrian arthropod that lives in underground water beneath mushroom island biomes. Feed two anomalocaris a **Worm** each to breed.
 
-**Drops:** Raw Anomalocaris | **Bucketable:** Yes
+**Bucketable:** Yes
 
 ---
 
@@ -104,7 +104,7 @@ An ancient Cambrian arthropod that lives in underground water beneath mushroom i
 
 *Spawns in:* Warm Ocean
 
-A vibrant nudibranch with a highly varied appearance. Each sea slug has a randomly assigned **color** (from 20 options) and **pattern** (from 5 options), for up to 100 possible combinations. On top of that, there's a 30% chance of bioluminescence — body glow, pattern glow, or both. Offspring inherit the parent's color and pattern. Feed two sea slugs a **Worm** each to breed.
+A vibrant nudibranch with a highly varied appearance. Each sea slug has a randomly assigned **color** (from 20 options) and **pattern** (from 5 options), for up to 100 possible combinations. On top of that, there's a 30% chance of bioluminescence — body glow, pattern glow, or both. Offspring inherit the parent's color and pattern. Feed two sea slugs a **Worm** each to breed. Sea slugs that hatch from eggs will never despawn.
 
 **Bucketable:** Yes
 
@@ -117,9 +117,9 @@ A vibrant nudibranch with a highly varied appearance. Each sea slug has a random
 A scuttling crustacean that walks on land. Comes in **4 variants** tied to specific biomes:
 
 - **Dungeness** — Beach
-- **Ghost** — Mangrove Swamp
+- **Ghost** — Swamp, Mangrove Swamp (rare, 5% chance)
 - **Blue Claw** — Stony Shore
-- **Mojang** — Swamp (rare, 5% chance)
+- **Mojang** — Swamp, Mangrove Swamp (rare, 5% chance)
 
 **Drops:** Raw Crab Legs | **Bucketable:** Yes
 
@@ -139,7 +139,7 @@ An apex predator. Orcas form **pods** — they swim together and alert each othe
 
 *Spawns in:* Deep Cold Ocean, Deep Frozen Ocean
 
-A massive, peaceful filter feeder. Right whales **never despawn** and can remain submerged for about 4 minutes before surfacing. They swim in loose groups and calves follow adults. **30% of right whales spawn as calves.**
+A massive, peaceful filter feeder. Right whales can remain submerged for about 4 minutes before surfacing. They swim in loose groups and calves follow adults. **30% of right whales spawn as calves.**
 
 Right whales spawn with varying levels of **barnacle coverage** (none, some, or full). Use **Shears** to remove one level per use, dropping **1–3 Nautilus Shells** each time.
 
@@ -241,18 +241,12 @@ A mud variant that generates underground in **Mangrove Swamps**. Mining it can y
 | Fried Sunfish | Cook Sunfish in a furnace |
 | Raw Catfish | Dropped by Catfish; chance from fishing |
 | Cooked Catfish | Cook Raw Catfish |
-| Raw Dongfish | Dropped by Dongfish; chance from fishing |
-| Cooked Dongfish | Cook Raw Dongfish |
-| Raw Seahorse | Dropped by Seahorse; chance from fishing |
-| Cooked Seahorse | Cook Raw Seahorse |
 | Raw Bubble Eye | Dropped by Bubble Eye; chance from fishing |
 | Cooked Bubble Eye | Cook Raw Bubble Eye |
 | Raw Mahi Mahi | Dropped by Mahi Mahi; chance from fishing |
 | Cooked Mahi Mahi | Cook Raw Mahi Mahi |
 | Raw Anglerfish | Dropped by Anglerfish; chance from fishing |
 | Cooked Anglerfish | Cook Raw Anglerfish |
-| Raw Anomalocaris | Dropped by Anomalocaris; chance from fishing |
-| Cooked Anomalocaris | Cook Raw Anomalocaris |
 | Raw Crab Legs | Dropped by Crab |
 | Cooked Crab Legs | Cook Raw Crab Legs |
 | Worm | Mine Wormy Dirt or Wormy Mud — causes nausea if eaten |
@@ -269,7 +263,7 @@ All raw modded fish (except crab legs) have a **25% chance** to appear when fish
 
 ### Buckets
 
-Right-click most fish with an empty **Water Bucket** to capture them. The resulting mob bucket preserves their color, variant, and state (a sheared Dongfish stays sheared; Fry keep their tint color). Place them back down from the bucket to release them. Urchin uses an empty Bucket instead of a Water Bucket.
+Right-click most fish with an empty **Water Bucket** to capture them. The resulting mob bucket preserves their color, variant, and state (a sheared Dongfish stays sheared; Fry keep their tint color). Place them back down from the bucket to release them. Urchin uses an empty Bucket instead of a Water Bucket. Mobs released from a bucket will **never despawn**. Giving any mob a name tag also prevents it from despawning.
 
 Bucketable: Fry, Sunfish, Catfish, Dongfish, Seahorse, Bubble Eye, Anglerfish, Mahi Mahi, Anomalocaris, Sea Slug, Crab, Urchin.
 
@@ -309,6 +303,6 @@ Bucketable: Fry, Sunfish, Catfish, Dongfish, Seahorse, Bubble Eye, Anglerfish, M
 
 ## Credits
 
-Made by **EightSidedSquare**, **Diansu**, and **Sillvia**.
+Made by **Braeden Silver**, **EightSidedSquare**, **Diansu**, and **Sillvia**.
 
 Licensed under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).

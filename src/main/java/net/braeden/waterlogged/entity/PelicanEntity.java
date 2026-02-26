@@ -316,10 +316,7 @@ public class PelicanEntity extends Animal implements FlyingAnimal {
         return item == net.braeden.waterlogged.item.WaterloggedItems.SUNFISH
                 || item == net.braeden.waterlogged.item.WaterloggedItems.RAW_MAHI_MAHI
                 || item == net.braeden.waterlogged.item.WaterloggedItems.RAW_CATFISH
-                || item == net.braeden.waterlogged.item.WaterloggedItems.RAW_DONGFISH
-                || item == net.braeden.waterlogged.item.WaterloggedItems.RAW_SEAHORSE
                 || item == net.braeden.waterlogged.item.WaterloggedItems.RAW_BUBBLE_EYE
-                || item == net.braeden.waterlogged.item.WaterloggedItems.RAW_ANOMALOCARIS
                 || item == net.braeden.waterlogged.item.WaterloggedItems.RAW_ANGLERFISH;
     }
 

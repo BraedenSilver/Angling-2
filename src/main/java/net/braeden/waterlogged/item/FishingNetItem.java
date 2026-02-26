@@ -1,13 +1,10 @@
 package net.braeden.waterlogged.item;
 
 import net.braeden.waterlogged.entity.AnglerfishEntity;
-import net.braeden.waterlogged.entity.AnomalocarisEntity;
 import net.braeden.waterlogged.entity.BubbleEyeEntity;
 import net.braeden.waterlogged.entity.CatfishEntity;
 import net.braeden.waterlogged.entity.CrabEntity;
-import net.braeden.waterlogged.entity.DongfishEntity;
 import net.braeden.waterlogged.entity.MahiMahiEntity;
-import net.braeden.waterlogged.entity.SeahorseEntity;
 import net.braeden.waterlogged.entity.SunfishEntity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -35,10 +32,7 @@ public class FishingNetItem extends Item {
         if (entity instanceof MahiMahiEntity) return WaterloggedItems.RAW_MAHI_MAHI;
         if (entity instanceof CrabEntity) return WaterloggedItems.RAW_CRAB_LEGS;
         if (entity instanceof CatfishEntity) return WaterloggedItems.RAW_CATFISH;
-        if (entity instanceof DongfishEntity) return WaterloggedItems.RAW_DONGFISH;
-        if (entity instanceof SeahorseEntity) return WaterloggedItems.RAW_SEAHORSE;
         if (entity instanceof BubbleEyeEntity) return WaterloggedItems.RAW_BUBBLE_EYE;
-        if (entity instanceof AnomalocarisEntity) return WaterloggedItems.RAW_ANOMALOCARIS;
         if (entity instanceof AnglerfishEntity) return WaterloggedItems.RAW_ANGLERFISH;
         if (entity instanceof Cod) return Items.COD;
         if (entity instanceof Salmon) return Items.SALMON;

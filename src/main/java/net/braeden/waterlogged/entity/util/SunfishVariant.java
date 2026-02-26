@@ -15,6 +15,11 @@ public enum SunfishVariant implements StringRepresentable {
 
     private static final SunfishVariant[] VALUES = values();
 
+    /** Variants that can appear in the wild (excludes the nametag-only DIANSUS_DIANSUR). */
+    public static final SunfishVariant[] WILD_VARIANTS = java.util.Arrays.stream(VALUES)
+            .filter(v -> v != DIANSUS_DIANSUR)
+            .toArray(SunfishVariant[]::new);
+
     private final int id;
     private final String textureName;
 

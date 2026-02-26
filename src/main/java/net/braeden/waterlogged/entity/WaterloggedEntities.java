@@ -190,7 +190,7 @@ public class WaterloggedEntities {
         SpawnPlacements.register(SUNFISH, SpawnPlacementTypes.IN_WATER,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, WaterAnimal::checkSurfaceWaterAnimalSpawnRules);
         SpawnPlacements.register(SEA_SLUG, SpawnPlacementTypes.IN_WATER,
-                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, WaterAnimal::checkSurfaceWaterAnimalSpawnRules);
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, SeaSlugEntity::canSpawn);
         SpawnPlacements.register(CRAB, SpawnPlacementTypes.ON_GROUND,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, CrabEntity::canSpawn);
         SpawnPlacements.register(DONGFISH, SpawnPlacementTypes.IN_WATER,
@@ -219,11 +219,11 @@ public class WaterloggedEntities {
         );
         BiomeModifications.addSpawn(
                 biome -> biome.getBiomeRegistryEntry().is(WaterloggedBiomeTags.SEA_SLUG_SPAWN_IN),
-                MobCategory.WATER_AMBIENT, SEA_SLUG, 4, 1, 3
+                MobCategory.WATER_AMBIENT, SEA_SLUG, 15, 2, 6
         );
         BiomeModifications.addSpawn(
                 biome -> biome.getBiomeRegistryEntry().is(WaterloggedBiomeTags.CATFISH_SPAWN_IN),
-                MobCategory.WATER_AMBIENT, CATFISH, 1, 1, 2
+                MobCategory.WATER_AMBIENT, CATFISH, 3, 1, 2
         );
         BiomeModifications.addSpawn(
                 biome -> biome.getBiomeRegistryEntry().is(WaterloggedBiomeTags.CRAB_SPAWN_IN),
@@ -235,7 +235,7 @@ public class WaterloggedEntities {
         );
         BiomeModifications.addSpawn(
                 biome -> biome.getBiomeRegistryEntry().is(WaterloggedBiomeTags.BUBBLE_EYE_SPAWN_IN),
-                MobCategory.WATER_AMBIENT, BUBBLE_EYE, 4, 2, 3
+                MobCategory.WATER_AMBIENT, BUBBLE_EYE, 2, 1, 2
         );
         BiomeModifications.addSpawn(
                 biome -> biome.getBiomeRegistryEntry().is(WaterloggedBiomeTags.ANOMALOCARIS_SPAWN_IN),
@@ -243,7 +243,7 @@ public class WaterloggedEntities {
         );
         BiomeModifications.addSpawn(
                 biome -> biome.getBiomeRegistryEntry().is(WaterloggedBiomeTags.DONGFISH_SPAWN_IN),
-                MobCategory.UNDERGROUND_WATER_CREATURE, DONGFISH, 8, 1, 3
+                MobCategory.UNDERGROUND_WATER_CREATURE, DONGFISH, 4, 1, 2
         );
         BiomeModifications.addSpawn(
                 biome -> biome.getBiomeRegistryEntry().is(WaterloggedBiomeTags.ANGLERFISH_SPAWN_IN),
@@ -255,7 +255,7 @@ public class WaterloggedEntities {
         );
         BiomeModifications.addSpawn(
                 biome -> biome.getBiomeRegistryEntry().is(WaterloggedBiomeTags.ORCA_SPAWN_IN),
-                MobCategory.WATER_CREATURE, ORCA, 1, 1, 2
+                MobCategory.WATER_CREATURE, ORCA, 1, 1, 1
         );
         BiomeModifications.addSpawn(
                 biome -> biome.getBiomeRegistryEntry().is(WaterloggedBiomeTags.RIGHT_WHALE_SPAWN_IN),

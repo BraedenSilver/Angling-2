@@ -36,7 +36,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.util.RandomSource;
+import net.minecraft.core.BlockPos;
 import org.jetbrains.annotations.Nullable;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.entity.AnimationState;
@@ -48,6 +53,9 @@ public class SeaSlugEntity extends WaterAnimal implements WormBreeder, Bucketabl
             SynchedEntityData.defineId(SeaSlugEntity.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> BIOLUMINESCENCE =
             SynchedEntityData.defineId(SeaSlugEntity.class, EntityDataSerializers.INT);
+    private static final EntityDataAccessor<Byte> DATA_FLAGS =
+            SynchedEntityData.defineId(SeaSlugEntity.class, EntityDataSerializers.BYTE);
+    private static final int FLAG_CLIMBING = 0x1;
 
     public final AnimationState ambientAnimationState = new AnimationState();
     public final AnimationState movingAnimationState = new AnimationState();
@@ -71,6 +79,7 @@ public class SeaSlugEntity extends WaterAnimal implements WormBreeder, Bucketabl
         builder.define(COLOR, SeaSlugColor.RED.getId());
         builder.define(PATTERN, SeaSlugPattern.PLAIN.getId());
         builder.define(BIOLUMINESCENCE, SeaSlugBioluminescence.NONE.getId());
+        builder.define(DATA_FLAGS, (byte) 0);
     }
 
     @Override
@@ -113,6 +122,13 @@ public class SeaSlugEntity extends WaterAnimal implements WormBreeder, Bucketabl
         this.getEntityData().set(BIOLUMINESCENCE, biolum.getId());
     }
 
+    public static boolean canSpawn(EntityType<SeaSlugEntity> type, LevelAccessor level,
+            EntitySpawnReason reason, BlockPos pos, RandomSource random) {
+        FluidState fluid = level.getFluidState(pos);
+        FluidState above = level.getFluidState(pos.above());
+        return fluid.is(FluidTags.WATER) && above.is(FluidTags.WATER);
+    }
+
     @Override
     public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty,
                                                    EntitySpawnReason spawnReason, @Nullable SpawnGroupData entityData) {
@@ -127,6 +143,20 @@ public class SeaSlugEntity extends WaterAnimal implements WormBreeder, Bucketabl
         else if (biolumRoll == 8) this.setBioluminescence(SeaSlugBioluminescence.PATTERN);
         else if (biolumRoll == 9) this.setBioluminescence(SeaSlugBioluminescence.BOTH);
         return data;
+    }
+
+    public boolean isClimbing() {
+        return (this.getEntityData().get(DATA_FLAGS) & FLAG_CLIMBING) != 0;
+    }
+
+    public void setClimbing(boolean climbing) {
+        byte flags = this.getEntityData().get(DATA_FLAGS);
+        this.getEntityData().set(DATA_FLAGS, climbing ? (byte) (flags | FLAG_CLIMBING) : (byte) (flags & ~FLAG_CLIMBING));
+    }
+
+    @Override
+    public boolean onClimbable() {
+        return this.isClimbing();
     }
 
     @Override
@@ -227,8 +257,9 @@ public class SeaSlugEntity extends WaterAnimal implements WormBreeder, Bucketabl
     public void tick() {
         super.tick();
 
-        if (!this.level().isClientSide() && wormBredTimer > 0) {
-            wormBredTimer--;
+        if (!this.level().isClientSide()) {
+            if (wormBredTimer > 0) wormBredTimer--;
+            this.setClimbing(this.horizontalCollision);
         }
 
         if (this.level().isClientSide()) {

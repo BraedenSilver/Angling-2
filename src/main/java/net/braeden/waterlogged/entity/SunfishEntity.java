@@ -86,9 +86,18 @@ public class SunfishEntity extends AbstractFish implements WormBreeder {
     public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty,
                                                    EntitySpawnReason spawnReason, @Nullable SpawnGroupData entityData) {
         SpawnGroupData data = super.finalizeSpawn(world, difficulty, spawnReason, entityData);
-        SunfishVariant[] variants = SunfishVariant.values();
-        this.setVariant(variants[world.getRandom().nextInt(variants.length)]);
+        SunfishVariant[] wild = SunfishVariant.WILD_VARIANTS;
+        this.setVariant(wild[world.getRandom().nextInt(wild.length)]);
         return data;
+    }
+
+    @Override
+    public void setCustomName(@Nullable net.minecraft.network.chat.Component name) {
+        super.setCustomName(name);
+        if (!this.level().isClientSide() && name != null
+                && name.getString().equalsIgnoreCase("diansu")) {
+            this.setVariant(SunfishVariant.DIANSUS_DIANSUR);
+        }
     }
 
     @Override

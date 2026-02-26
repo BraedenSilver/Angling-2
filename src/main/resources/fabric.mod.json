@@ -4,14 +4,15 @@
   "version": "${version}",
 
   "name": "Waterlogged Mod",
-  "description": "FISH!",
+  "description": "Expands and deepens the aquatic experience with new creatures, plants, and ocean structures.",
   "authors": [
+    "Braeden Silver",
     "EightSidedSquare",
     "Diansu",
     "Sillvia"
   ],
   "contact": {
-    "homepage": "https://eightsidedsquare.com/"
+    "homepage": "https://github.com/BraedenSilver/Waterlogged"
   },
 
   "license": "CC0-1.0",

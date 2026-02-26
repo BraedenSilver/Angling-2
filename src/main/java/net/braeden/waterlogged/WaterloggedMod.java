@@ -123,10 +123,7 @@ public class WaterloggedMod implements ModInitializer {
 								.add(LootItem.lootTableItem(WaterloggedItems.SUNFISH))
 								.add(LootItem.lootTableItem(WaterloggedItems.RAW_MAHI_MAHI))
 								.add(LootItem.lootTableItem(WaterloggedItems.RAW_CATFISH))
-								.add(LootItem.lootTableItem(WaterloggedItems.RAW_DONGFISH))
-								.add(LootItem.lootTableItem(WaterloggedItems.RAW_SEAHORSE))
 								.add(LootItem.lootTableItem(WaterloggedItems.RAW_BUBBLE_EYE))
-								.add(LootItem.lootTableItem(WaterloggedItems.RAW_ANOMALOCARIS))
 								.add(LootItem.lootTableItem(WaterloggedItems.RAW_ANGLERFISH))
 				);
 			}

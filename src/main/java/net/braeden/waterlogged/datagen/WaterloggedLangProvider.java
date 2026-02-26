@@ -153,14 +153,8 @@ public class WaterloggedLangProvider extends FabricLanguageProvider {
         builder.add("item.waterlogged.cooked_crab_legs", "Cooked Crab Legs");
         builder.add("item.waterlogged.raw_catfish", "Raw Catfish");
         builder.add("item.waterlogged.cooked_catfish", "Cooked Catfish");
-        builder.add("item.waterlogged.raw_dongfish", "Raw Dongfish");
-        builder.add("item.waterlogged.cooked_dongfish", "Cooked Dongfish");
-        builder.add("item.waterlogged.raw_seahorse", "Raw Seahorse");
-        builder.add("item.waterlogged.cooked_seahorse", "Cooked Seahorse");
         builder.add("item.waterlogged.raw_bubble_eye", "Raw Bubble Eye");
         builder.add("item.waterlogged.cooked_bubble_eye", "Cooked Bubble Eye");
-        builder.add("item.waterlogged.raw_anomalocaris", "Raw Anomalocaris");
-        builder.add("item.waterlogged.cooked_anomalocaris", "Cooked Anomalocaris");
         builder.add("item.waterlogged.raw_anglerfish", "Raw Anglerfish");
         builder.add("item.waterlogged.cooked_anglerfish", "Cooked Anglerfish");
 

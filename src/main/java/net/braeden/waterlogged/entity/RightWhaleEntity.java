@@ -147,12 +147,6 @@ public class RightWhaleEntity extends AbstractFish {
     }
 
     // -------------------------------------------------------------------------
-    // Persistence — right whales never despawn
-    // -------------------------------------------------------------------------
-
-    @Override
-    public boolean requiresCustomPersistence() { return true; }
-
     // -------------------------------------------------------------------------
     // Interaction — shearing removes barnacles one level at a time
     // -------------------------------------------------------------------------
